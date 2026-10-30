@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffd43b" />
+    <meta
+      name="description"
+      content="Introdução à robótica e ao LEGO MINDSTORMS Education EV3: bloco programável, motores, sensores, montagem da base motriz, vídeos e instruções oficiais."
+    />
+    <meta
+      name="keywords"
+      content="robótica educacional, LEGO MINDSTORMS EV3, base motriz, sensores EV3, sensor de toque, ultrassônico, cor, giroscópio"
+    />
+    <meta name="author" content="Jardel da Silva" />
+    <meta name="robots" content="index,follow" />
+    <title>Robótica e kit EV3 — Circuito de Decisões</title>
+    <link rel="icon" href="assets/marca.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="robotica-ev3.css" />
+    <script defer src="site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Circuito de Decisões — apresentação"
+        >
+          <img src="assets/marca.svg" alt="" width="40" height="40" />
+          <span>Circuito<span> de Decisões</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+        >
+          <svg
+            class="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.7"
+            viewBox="0 0 24 24"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+          <span>Menu</span>
+        </button>
+        <nav
+          aria-label="Navega&ccedil;&atilde;o principal"
+          class="main-nav"
+          id="menu-principal"
+        >
+          <a href="index.html">Apresentação</a>
+          <script></script>
+          <a href="teoria.html"> Teoria </a>
+          <a href="tabela-verdade.html"> Tabela-verdade </a>
+          <a href="robotica-ev3.html" aria-current="page"> Robótica e EV3 </a>
+          <div class="encounter-menu">
+            <div class="encounter-trigger">
+              <a href="encontros.html"> Encontros </a>
+              <button
+                aria-controls="lista-encontros"
+                aria-expanded="false"
+                aria-label="Abrir submenu dos seis encontros"
+                class="dropdown-toggle"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+
+            <ul class="dropdown" id="lista-encontros">
+              <li>
+                <a href="encontro-1.html">
+                  <span class="mono"> 01 </span>
+                  Diagn&oacute;stico, kit e tabela
+                </a>
+              </li>
+              <li>
+                <a href="encontro-2.html">
+                  <span class="mono"> 02 </span>
+                  L&oacute;gica e rob&ocirc;-base
+                </a>
+              </li>
+              <li>
+                <a href="encontro-3.html">
+                  <span class="mono"> 03 </span>
+                  Um sensor e repeti&ccedil;&atilde;o
+                </a>
+              </li>
+              <li>
+                <a href="encontro-4.html">
+                  <span class="mono"> 04 </span>
+                  Dois sensores e condi&ccedil;&otilde;es
+                </a>
+              </li>
+              <li>
+                <a href="encontro-5.html">
+                  <span class="mono"> 05 </span>
+                  Operadores com foco em AND
+                </a>
+              </li>
+              <li>
+                <a href="encontro-6.html">
+                  <span class="mono"> 06 </span>
+                  Projeto, socializa&ccedil;&atilde;o e question&aacute;rio
+                </a>
+              </li>
+              <li class="dropdown-all">
+                <a href="encontros.html">
+                  Ver a sequ&ecirc;ncia completa
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                    viewbox="0 0 24 24"
+                  >
+                    <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="referencias.html"> Refer&ecirc;ncias </a>
+          <a href="autores.html"> Autores </a>
+          <a href="apendices.html"> Ap&ecirc;ndices </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo" class="ev3-page">
+      <div class="container page-top">
+        <nav class="breadcrumbs" aria-label="Você está aqui">
+          <a href="index.html">Apresentação</a><span aria-hidden="true">/</span>
+          <a href="tutoriais.html">Tutoriais</a
+          ><span aria-hidden="true">/</span>
+          <span aria-current="page">Robótica e EV3</span>
+        </nav>
+        <div class="page-heading">
+          <p class="eyebrow">
+            Robótica educacional · consulta para professores
+          </p>
+          <h1>Robótica e kit LEGO MINDSTORMS EV3</h1>
+          <p class="page-lead">
+            Uma introdução ao robô como sistema de entrada, processamento e
+            ação, com explicações do bloco EV3, dos sensores, da base motriz e
+            de materiais para montar e experimentar.
+          </p>
+        </div>
+      </div>
+
+      <div class="container page-content ev3-content">
+        <nav class="reading-nav" aria-label="Nesta página">
+          <a href="#robotica">Robótica</a>
+          <a href="#kit">Kit EV3</a>
+          <a href="#montagem">Base motriz</a>
+          <a href="#sensores">Sensores</a>
+          <a href="#materiais">Manuais e instruções</a>
+          <a href="#videos">Vídeos</a>
+          <a href="#fontes">Fontes</a>
+        </nav>
+
+        <section class="content-section" id="robotica">
+          <div class="ev3-intro-grid">
+            <div>
+              <p class="eyebrow">Da percepção à resposta</p>
+              <h2>O que é robótica?</h2>
+              <p>
+                A robótica reúne conhecimentos de construção mecânica,
+                eletrônica, controle e programação para projetar e operar
+                sistemas robóticos. Em uma atividade com EV3, podemos observar
+                esse processo de perto: sensores recebem informações do
+                ambiente, o programa avalia condições e motores ou mecanismos
+                produzem uma ação.
+              </p>
+              <p>
+                Um robô não precisa ter forma humana, usar inteligência
+                artificial ou funcionar sem a participação de uma pessoa. Ele
+                pode executar uma tarefa simples e previamente programada, como
+                parar diante de um obstáculo ou seguir uma linha. O ponto
+                central desta página é tornar observável a relação entre a
+                leitura de um sensor, a decisão do programa e a resposta do
+                robô.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.mtu.edu/academics/robotics/what/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Fonte introdutória sobre robótica e seus componentes</a
+              >
+            </div>
+            <figure class="ev3-figure ev3-figure-wide">
+              <img
+                src="assets/robotica-ev3/ev3-driving-base-curved-move.png"
+                alt="Robô-base móvel do conjunto LEGO MINDSTORMS EV3 Education mostrado de lado, com bloco programável, rodas e cabos"
+                width="1920"
+                height="1080"
+                fetchpriority="high"
+              />
+              <figcaption>
+                Base motriz ilustrada em uma aula oficial LEGO Education. A
+                imagem representa uma configuração de referência, não
+                necessariamente a montagem usada em cada turma.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div
+            class="ev3-flow"
+            role="group"
+            aria-label="Fluxo de funcionamento de um sistema robótico"
+          >
+            <div class="ev3-flow-step">
+              <span class="mono">01 · ENTRADA</span><strong>Ambiente</strong
+              ><span>distância, toque, luz ou cor</span>
+            </div>
+            <span class="ev3-flow-arrow" aria-hidden="true">→</span>
+            <div class="ev3-flow-step">
+              <span class="mono">02 · PROCESSAMENTO</span
+              ><strong>Bloco EV3</strong><span>executa o programa</span>
+            </div>
+            <span class="ev3-flow-arrow" aria-hidden="true">→</span>
+            <div class="ev3-flow-step">
+              <span class="mono">03 · SAÍDA</span><strong>Atuador</strong
+              ><span>motor ou mecanismo</span>
+            </div>
+          </div>
+          <p class="ev3-flow-caption">
+            A resposta altera o que acontece no ambiente; o ciclo pode se
+            repetir enquanto o programa consulta os sensores.
+          </p>
+        </section>
+
+        <section class="content-section" id="kit">
+          <p class="eyebrow">Hardware modular</p>
+          <h2>O que compõe o kit EV3 Education?</h2>
+          <p>
+            O EV3 não é um único robô pronto: é uma plataforma programável que
+            combina o bloco inteligente, peças de construção, sensores, motores,
+            cabos e alimentação. No capítulo 6 da dissertação, esse conjunto é
+            apresentado como um recurso para ligar ideias de lógica a respostas
+            observáveis do robô.
+          </p>
+          <p>
+            Na edição educacional 45544 referida no capítulo, a composição de
+            referência inclui um bloco EV3, dois motores grandes, um motor médio
+            e cinco sensores: dois de toque, um de cor, um ultrassônico e um
+            giroscópio. O conjunto também traz peças Technic, cabos e
+            alimentação. Confira o inventário do kit que sua escola realmente
+            possui, pois os conjuntos e suas edições variam.
+          </p>
+
+          <div class="ev3-kit-grid">
+            <figure class="ev3-figure ev3-figure-kit">
+              <img
+                src="assets/robotica-ev3/ev3-education-core-set-capitulo6.jpg"
+                alt="Conjunto EV3 Education organizado em uma bandeja: bloco programável, motores, sensores, rodas e peças Technic"
+                width="2048"
+                height="2048"
+                loading="lazy"
+              />
+              <figcaption>
+                Figura do capítulo 6 da dissertação, com crédito original
+                indicado a LEGO Education (2013). Confirme a autorização de
+                reprodução antes de publicar.
+              </figcaption>
+            </figure>
+            <div class="ev3-kit-copy">
+              <div class="ev3-component-grid">
+                <article class="ev3-component">
+                  <span class="ev3-number mono">A</span>
+                  <h3>Bloco programável</h3>
+                  <p>
+                    Executa o programa, recebe leituras e envia comandos aos
+                    motores. É o controlador central do protótipo.
+                  </p>
+                </article>
+                <article class="ev3-component">
+                  <span class="ev3-number mono">B</span>
+                  <h3>Sensores</h3>
+                  <p>
+                    Convertem características do ambiente — como contato,
+                    distância e luz — em dados que o programa consegue
+                    interpretar.
+                  </p>
+                </article>
+                <article class="ev3-component">
+                  <span class="ev3-number mono">C</span>
+                  <h3>Motores</h3>
+                  <p>
+                    Atuam sobre o ambiente: movimentam as rodas e podem acionar
+                    braços, garras ou outros mecanismos montados com as peças.
+                  </p>
+                </article>
+                <article class="ev3-component">
+                  <span class="ev3-number mono">D</span>
+                  <h3>Peças, cabos e energia</h3>
+                  <p>
+                    Vigas, pinos, eixos, engrenagens, cabos e bateria formam a
+                    estrutura e conectam os componentes eletrônicos.
+                  </p>
+                </article>
+              </div>
+              <div class="ev3-port-map">
+                <div>
+                  <span class="mono">PORTAS 1–4</span><strong>Entradas</strong>
+                  <p>Conexão dos sensores.</p>
+                </div>
+                <div>
+                  <span class="mono">PORTAS A–D</span><strong>Saídas</strong>
+                  <p>Conexão dos motores.</p>
+                </div>
+              </div>
+              <p class="ev3-small-note">
+                Essa numeração é a referência do EV3 usada no capítulo 6. Anote
+                as portas efetivamente conectadas no robô e escolha as mesmas no
+                programa.
+              </p>
+            </div>
+          </div>
+
+          <aside class="ev3-notice">
+            <p class="eyebrow">Antes de separar os kits</p>
+            <p>
+              A página oficial da LEGO Education marca o Core Set consultado
+              como aposentado. O inventário depende da edição: o conjunto
+              Education 45544 descrito para este trabalho e o conjunto Home
+              31313 não têm exatamente os mesmos sensores. Confira as peças e o
+              software disponíveis na sua escola antes de planejar a aula.
+            </p>
+            <a
+              class="text-link"
+              href="https://education.lego.com/en-us/products/lego-mindstorms-education-ev3-core-set/5003400/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver a página oficial do Core Set Education</a
+            >
+            <a
+              class="text-link"
+              href="https://robotsquare.com/2013/11/25/difference-between-ev3-home-edition-and-education-ev3/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Comparação entre as edições Education e Home</a
+            >
+          </aside>
+        </section>
+
+        <section class="content-section" id="montagem">
+          <p class="eyebrow">Construção de referência</p>
+          <h2>Como montar uma base motriz</h2>
+          <p>
+            A base motriz é um ponto de partida: ela reúne o bloco EV3, dois
+            motores que movimentam as rodas e uma estrutura firme. Depois de
+            testar a locomoção, o grupo pode acrescentar o suporte do sensor
+            adequado à pergunta da atividade.
+          </p>
+          <div class="ev3-build-grid">
+            <ol class="ev3-build-steps">
+              <li>
+                <span class="mono">01</span>
+                <div>
+                  <h3>Separe as peças</h3>
+                  <p>
+                    Use o inventário e as instruções do modelo escolhido. Agrupe
+                    vigas, pinos, eixos, rodas, motores e bloco EV3 antes de
+                    começar.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="mono">02</span>
+                <div>
+                  <h3>Monte o chassi</h3>
+                  <p>
+                    Construa os dois lados de forma simétrica e prenda os
+                    motores à estrutura. Reforce o quadro para reduzir torções.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="mono">03</span>
+                <div>
+                  <h3>Instale rodas e bloco</h3>
+                  <p>
+                    Confira o alinhamento das rodas e fixe o bloco EV3. Deixe
+                    espaço para acessar as portas e mantenha os cabos afastados
+                    das partes móveis.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="mono">04</span>
+                <div>
+                  <h3>Conecte e teste</h3>
+                  <p>
+                    Ligue cada motor a uma saída A–D e cada sensor a uma entrada
+                    1–4. Faça um teste curto com o robô suspenso, depois confira
+                    a leitura de cada sensor.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <figure class="ev3-figure ev3-figure-build">
+              <img
+                src="assets/robotica-ev3/ev3-brick-color-sensor-help.png"
+                alt="Ilustração do bloco EV3 junto de um sensor de cor na documentação do produto"
+                width="513"
+                height="231"
+                loading="lazy"
+              />
+              <figcaption>
+                Planeje o encaixe do sensor e o percurso do cabo antes de fechar
+                a estrutura. Consulte o PDF oficial para reproduzir o suporte do
+                modelo escolhido.
+              </figcaption>
+            </figure>
+          </div>
+          <aside class="ev3-notice ev3-notice-warm">
+            <p>
+              <strong>Uma diferença importante:</strong> o vídeo de montagem
+              abaixo é uma demonstração silenciosa de base com rodas; ele não
+              mostra sensores, cabeamento nem programação. A sequência descrita
+              na dissertação pode usar outra configuração, como esteiras. Use o
+              manual para conferir as peças e adapte a construção ao robô
+              efetivamente planejado.
+            </p>
+          </aside>
+        </section>
+
+        <section class="content-section" id="sensores">
+          <p class="eyebrow">Entradas do sistema</p>
+          <h2>Quatro sensores, quatro tipos de leitura</h2>
+          <p>
+            Um sensor não “decide” o que o robô fará. Ele fornece uma leitura; o
+            programa define como interpretá-la. O toque pode fornecer
+            diretamente uma condição lógica, enquanto distância e intensidade de
+            luz são valores numéricos que podem ser comparados a um limite.
+          </p>
+          <div class="ev3-sensor-grid">
+            <article class="ev3-sensor-card">
+              <div class="ev3-sensor-head">
+                <span class="mono">01 / CONTATO</span>
+                <h3>Sensor de toque</h3>
+              </div>
+              <p>
+                Informa se o botão está pressionado ou solto; também pode
+                reconhecer que foi pressionado e liberado. É uma entrada útil
+                para um botão de início ou para detectar um contato.
+              </p>
+              <div class="ev3-example">
+                <strong>Exemplo</strong
+                ><span>“Se o botão for pressionado, pare o motor.”</span>
+              </div>
+              <p class="ev3-caution">
+                Ele identifica o estado do botão, não mede a força nem a
+                profundidade do toque.
+              </p>
+              <a
+                class="text-link"
+                href="https://ev3-help-online.api.education.lego.com/Education/en-gb/page.html?Path=editor%2FUsingSensors_Touch.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ajuda oficial sobre o sensor de toque</a
+              >
+            </article>
+            <article class="ev3-sensor-card">
+              <div class="ev3-sensor-head">
+                <span class="mono">02 / DISTÂNCIA</span>
+                <h3>Sensor ultrassônico</h3>
+              </div>
+              <p>
+                Emite ondas sonoras que não ouvimos e estima a distância até uma
+                superfície a partir do retorno do sinal. O programa pode
+                comparar a leitura, em centímetros ou polegadas, com um limite.
+              </p>
+              <div class="ev3-example">
+                <strong>Exemplo</strong
+                ><span>“Se a distância for menor que 10 cm, pare.”</span>
+              </div>
+              <p class="ev3-caution">
+                Tecidos e superfícies inclinadas podem refletir pior o som;
+                objetos muito próximos também podem não ser detectados.
+              </p>
+              <a
+                class="text-link"
+                href="https://ev3-help-online.api.education.lego.com/Education/en-gb/page.html?Path=editor%2FUsingSensors_Ultrasonic.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ajuda oficial sobre o ultrassônico</a
+              >
+            </article>
+            <article class="ev3-sensor-card">
+              <div class="ev3-sensor-head">
+                <span class="mono">03 / COR E LUZ</span>
+                <h3>Sensor de cor</h3>
+              </div>
+              <p>
+                Pode identificar cores próximas ou medir luz refletida e luz
+                ambiente. Uma atividade comum é perceber a diferença de
+                luminosidade entre uma faixa escura e o piso claro.
+              </p>
+              <div class="ev3-example">
+                <strong>Exemplo</strong
+                ><span
+                  >“Se a luz refletida ficar abaixo do limite, reconheça a
+                  linha.”</span
+                >
+              </div>
+              <p class="ev3-caution">
+                A distância do chão e a iluminação da sala alteram as leituras;
+                teste os valores no ambiente real.
+              </p>
+              <a
+                class="text-link"
+                href="https://ev3-help-online.api.education.lego.com/Education/en-gb/page.html?Path=editor%2FUsingSensors_Color.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ajuda oficial sobre o sensor de cor</a
+              >
+            </article>
+            <article class="ev3-sensor-card">
+              <div class="ev3-sensor-head">
+                <span class="mono">04 / ROTAÇÃO</span>
+                <h3>Giroscópio</h3>
+              </div>
+              <p>
+                Mede a rotação em torno de um eixo e pode fornecer o ângulo ou a
+                taxa de rotação. Ajuda o robô a controlar giros ou a observar
+                mudanças de orientação.
+              </p>
+              <div class="ev3-example">
+                <strong>Exemplo</strong
+                ><span>“Gire até que o ângulo mude 90°.”</span>
+              </div>
+              <p class="ev3-caution">
+                Conecte-o imóvel e na orientação indicada; a leitura pode
+                derivar, então redefina o ângulo antes do teste quando
+                necessário.
+              </p>
+              <a
+                class="text-link"
+                href="https://ev3-help-online.api.education.lego.com/Education/en-gb/page.html?Path=editor%2FUsingSensors_Gyro.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ajuda oficial sobre o giroscópio</a
+              >
+            </article>
+          </div>
+
+          <div class="ev3-logic-example">
+            <p class="eyebrow">Da leitura ao conectivo</p>
+            <h3>
+              Uma condição de robótica também pode ser escrita como lógica
+            </h3>
+            <p>
+              Imagine duas condições: <code>toque = solto</code> e
+              <code>distância &gt; 10 cm</code>. Se o programa mandar avançar
+              somente quando ambas forem verdadeiras, ele combina as condições
+              com <strong>AND</strong>. A distância é um número; a comparação
+              com 10 cm produz verdadeiro ou falso.
+            </p>
+            <a class="text-link" href="tabela-verdade.html"
+              >Rever as tabelas-verdade de AND, OR e NOT</a
+            >
+          </div>
+        </section>
+
+        <section class="content-section" id="materiais">
+          <p class="eyebrow">Instruções oficiais</p>
+          <h2>Manuais para montagem da base e dos sensores</h2>
+          <p>
+            Os PDFs abaixo são instruções ilustradas de montagem da LEGO
+            Education; cada folha mostra como construir ou acoplar um modelo ao
+            robô. Para entender os modos de leitura e programação dos sensores,
+            use também os guias de funcionamento em linha que aparecem nos
+            cartões acima.
+          </p>
+          <div class="ev3-resource-grid">
+            <article class="ev3-resource-card ev3-resource-featured">
+              <span class="mono">PDF · BASE</span>
+              <h3>Driving Base / Base motriz</h3>
+              <p>
+                Instruções ilustradas para a estrutura motriz de referência, com
+                rodas e dois motores.
+              </p>
+              <a
+                class="text-link"
+                href="https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltc0dd681a7b3bfa8b/5ec7c6a6cd4cf750c888fa6f/ev3-rem-driving-base.pdf?locale=en-us"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir instruções da base motriz (PDF)</a
+              >
+            </article>
+            <article class="ev3-resource-card">
+              <span class="mono">PDF · SENSOR</span>
+              <h3>Sensor de toque</h3>
+              <p>Peças de suporte para acrescentar o sensor de toque à base.</p>
+              <a
+                class="text-link"
+                href="https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt95682a19090a6923/5f8801e2ad20281d51fbc1cc/ev3-touch-sensor-driving-base.pdf?locale=en-us"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir instruções do sensor de toque (PDF)</a
+              >
+            </article>
+            <article class="ev3-resource-card">
+              <span class="mono">PDF · SENSOR</span>
+              <h3>Sensor ultrassônico</h3>
+              <p>Montagem do suporte ultrassônico na base motriz.</p>
+              <a
+                class="text-link"
+                href="https://assets.education.lego.com/v3/assets/blt293eea581807678a/blte04fb7bf4f716f3d/5f8801e3bf5ab07ee90076c9/ev3-ultrasonic-sensor-driving-base.pdf?locale=en-us"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir instruções do ultrassônico (PDF)</a
+              >
+            </article>
+            <article class="ev3-resource-card">
+              <span class="mono">PDF · SENSOR</span>
+              <h3>Sensor de cor</h3>
+              <p>
+                Há duas posições de montagem: voltado para baixo ou para a
+                frente.
+              </p>
+              <a
+                class="text-link"
+                href="https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt8b300493e30608e9/5f8801dfb8b59a77a945d13c/ev3-rem-color-sensor-down-driving-base.pdf?locale=en-us"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Sensor para baixo (PDF)</a
+              >
+              <a
+                class="text-link"
+                href="https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt4e905d4d328957d7/5f8801d9d041c37a4af70688/ev3-color-sensor-forward-driving-base.pdf?locale=en-us"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Sensor para a frente (PDF)</a
+              >
+            </article>
+            <article class="ev3-resource-card">
+              <span class="mono">PDF · SENSOR</span>
+              <h3>Giroscópio</h3>
+              <p>Instruções para montar o sensor giroscópico na base.</p>
+              <a
+                class="text-link"
+                href="https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltc961107e6587a579/5f8801dd3b19d21d4a6085bf/ev3-gyro-sensor-driving-base.pdf?locale=en-us"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir instruções do giroscópio (PDF)</a
+              >
+            </article>
+            <article class="ev3-resource-card ev3-resource-index">
+              <span class="mono">CATÁLOGO DE INSTRUÇÕES</span>
+              <h3>Outros modelos e suportes</h3>
+              <p>
+                A página reúne instruções da base, dos módulos de sensores e dos
+                modelos educacionais do conjunto.
+              </p>
+              <a
+                class="text-link"
+                href="https://education.lego.com/en-us/product-resources/mindstorms-ev3/downloads/building-instructions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir a biblioteca oficial de instruções</a
+              >
+            </article>
+            <article class="ev3-resource-card">
+              <span class="mono">AULAS · PORTUGUÊS</span>
+              <h3>Tutoriais LEGO Education</h3>
+              <p>
+                Atividades introdutórias de movimento em linha reta, movimento
+                em curva, movimentação de objeto e comutador.
+              </p>
+              <a
+                class="text-link"
+                href="https://education.lego.com/pt-br/lessons/ev3-tutorials/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir os tutoriais oficiais em português</a
+              >
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="videos">
+          <p class="eyebrow">Assistir e experimentar</p>
+          <h2>Vídeos curtos para acompanhar a montagem e os sensores</h2>
+          <p>
+            Os vídeos ajudam a visualizar procedimentos diferentes, mas nenhum
+            cobre sozinho todo o kit. O player só é carregado quando você
+            escolhe assistir; cada cartão traz uma orientação em texto para
+            ajudar a acompanhar ou substituir o vídeo.
+          </p>
+          <div class="video-grid ev3-video-grid">
+            <article class="video-card">
+              <div
+                class="video-cover"
+                data-video="Gl749MRA4SU"
+                data-video-title="Lego Mindstorms EV3 — Modelo básico de um Robot — Pedro Rosa"
+              >
+                <button
+                  class="video-load"
+                  type="button"
+                  aria-label="Carregar vídeo: montagem do robô-base EV3"
+                >
+                  <span class="video-symbol"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="m9 5 11 7-11 7z"></path></svg
+                  ></span>
+                  <span>Montagem · 7:19</span
+                  ><strong>Montagem visual do robô-base EV3</strong>
+                </button>
+              </div>
+              <div class="video-body">
+                <p class="resource-meta">Pedro Rosa · sem narração · 7:19</p>
+                <h3>Montagem visual do robô-base EV3</h3>
+                <p>
+                  Mostra a montagem do bloco EV3 com dois motores grandes, rodas
+                  e uma roda de apoio traseira.
+                </p>
+                <details class="text-guide">
+                  <summary>Orientação equivalente em texto</summary>
+                  <ol>
+                    <li>
+                      Separe o bloco EV3, dois motores grandes, rodas, eixos,
+                      vigas e pinos conforme o manual escolhido.
+                    </li>
+                    <li>
+                      Prenda os motores dos dois lados e reforce o chassi com
+                      vigas.
+                    </li>
+                    <li>
+                      Monte as rodas e o apoio traseiro; confira se a estrutura
+                      está nivelada e se as partes móveis giram livres.
+                    </li>
+                  </ol>
+                  <p class="small">
+                    O vídeo é silencioso e não mostra sensores, ligação dos
+                    cabos nem programação. Use as instruções oficiais para
+                    conferir as peças e complete o teste de portas
+                    separadamente.
+                  </p>
+                </details>
+                <div class="video-links">
+                  <a
+                    class="text-link"
+                    href="https://www.youtube.com/watch?v=Gl749MRA4SU"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Abrir no YouTube</a
+                  >
+                </div>
+                <p class="privacy-note">
+                  O vídeo não tem narração. A montagem descrita em texto acima
+                  complementa a demonstração.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div
+                class="video-cover"
+                data-video="aPIM-2IgDrQ"
+                data-video-title="Blocos de programação: Tempo, Toque e Sensor Ultrassônico — ABA AMARELA"
+              >
+                <button
+                  class="video-load"
+                  type="button"
+                  aria-label="Carregar vídeo: sensor de toque e ultrassônico no EV3"
+                >
+                  <span class="video-symbol"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="m9 5 11 7-11 7z"></path></svg
+                  ></span>
+                  <span>Sensores · 8:07</span
+                  ><strong>Tempo, toque e sensor ultrassônico</strong>
+                </button>
+              </div>
+              <div class="video-body">
+                <p class="resource-meta">
+                  Português brasileiro · demonstração de tela · 8:07
+                </p>
+                <h3>Tempo, toque e sensor ultrassônico</h3>
+                <p>
+                  Explora opções de leitura e comparação dos blocos de toque e
+                  ultrassônico no software EV3 Education clássico.
+                </p>
+                <details class="text-guide">
+                  <summary>Orientação equivalente em texto</summary>
+                  <ol>
+                    <li>
+                      Selecione o bloco do sensor e confira a porta de entrada
+                      conectada ao robô.
+                    </li>
+                    <li>
+                      Com o toque, compare os estados pressionado, solto ou
+                      pressionado e liberado.
+                    </li>
+                    <li>
+                      Com o ultrassônico, leia a distância e escolha uma
+                      comparação, por exemplo, menor que 10 cm.
+                    </li>
+                    <li>
+                      Relacione o resultado da comparação ao comportamento
+                      desejado e teste com o sensor físico.
+                    </li>
+                  </ol>
+                  <p class="small">
+                    É uma demonstração do software; não mostra a montagem do
+                    robô nem a execução física do código.
+                  </p>
+                </details>
+                <div class="video-links">
+                  <a
+                    class="text-link"
+                    href="https://www.youtube.com/watch?v=aPIM-2IgDrQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Abrir no YouTube</a
+                  >
+                </div>
+                <p class="privacy-note">
+                  Player sob escolha do visitante. Os controles exibidos podem
+                  variar conforme a versão do software EV3.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div
+                class="video-cover"
+                data-video="aY0ezLJxzCE"
+                data-video-title="Lego EV3 com sensor de cor — função Esperar — UP Educação Profissional"
+              >
+                <button
+                  class="video-load"
+                  type="button"
+                  aria-label="Carregar vídeo: usar o sensor de cor EV3 com o bloco Esperar"
+                >
+                  <span class="video-symbol"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="m9 5 11 7-11 7z"></path></svg
+                  ></span>
+                  <span>Sensor de cor · 4:29</span
+                  ><strong>Sensor de cor com a função Esperar</strong>
+                </button>
+              </div>
+              <div class="video-body">
+                <p class="resource-meta">
+                  UP Educação Profissional · português · 4:29
+                </p>
+                <h3>Sensor de cor com a função Esperar</h3>
+                <p>
+                  Demonstra o bloco Esperar com cores e testa a leitura do
+                  sensor físico diante de peças coloridas.
+                </p>
+                <details class="text-guide">
+                  <summary>Orientação equivalente em texto</summary>
+                  <ol>
+                    <li>
+                      Adicione um bloco Esperar e selecione Sensor de Cor →
+                      Comparar → Cor.
+                    </li>
+                    <li>
+                      Defina uma cor e acrescente a resposta do robô; teste o
+                      sensor com o objeto próximo.
+                    </li>
+                    <li>
+                      Repita o procedimento com outras cores e observe quando
+                      cada condição é satisfeita.
+                    </li>
+                  </ol>
+                  <p class="small">
+                    O exemplo organiza a leitura em uma sequência fixa de cores
+                    e usa o software clássico. Para reconhecer cores em qualquer
+                    ordem, o programa precisa de outra estrutura de decisão.
+                  </p>
+                </details>
+                <div class="video-links">
+                  <a
+                    class="text-link"
+                    href="https://www.youtube.com/watch?v=aY0ezLJxzCE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Abrir no YouTube</a
+                  >
+                </div>
+                <p class="privacy-note">
+                  Player carregado somente após escolha do visitante; a
+                  orientação escrita preserva os passos principais.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div
+                class="video-cover"
+                data-video="MqJJ9U9l4Ws"
+                data-video-title="How to program the color sensor in the LEGO MINDSTORMS EV3"
+              >
+                <button
+                  class="video-load"
+                  type="button"
+                  aria-label="Carregar vídeo em inglês: modos ambiente e luz refletida do sensor de cor"
+                >
+                  <span class="video-symbol"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="m9 5 11 7-11 7z"></path></svg
+                  ></span>
+                  <span>Sensor de cor · cerca de 4 min</span
+                  ><strong>Luz ambiente, luz refletida e limites</strong>
+                </button>
+              </div>
+              <div class="video-body">
+                <p class="resource-meta">
+                  Inglês · demonstração do monitor de hardware · cerca de 4 min
+                </p>
+                <h3>Como definir um limite para a leitura de luz</h3>
+                <p>
+                  Mostra leituras do sensor de cor com luz ambiente e luz
+                  refletida e compara superfícies claras e escuras.
+                </p>
+                <details class="text-guide">
+                  <summary>Orientação equivalente em português</summary>
+                  <ol>
+                    <li>
+                      Escolha no bloco do Sensor de Cor o modo de luz ambiente
+                      ou refletida.
+                    </li>
+                    <li>
+                      Observe no monitor do EV3 os valores no local e na
+                      superfície que a turma usará.
+                    </li>
+                    <li>
+                      Compare as leituras e defina um limite entre elas; teste o
+                      programa antes de fixar esse valor.
+                    </li>
+                  </ol>
+                  <p class="small">
+                    O valor-limite não é universal: a iluminação, a superfície e
+                    a posição do sensor alteram a leitura.
+                  </p>
+                </details>
+                <div class="video-links">
+                  <a
+                    class="text-link"
+                    href="https://www.youtube.com/watch?v=MqJJ9U9l4Ws"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Abrir no YouTube</a
+                  >
+                </div>
+                <p class="privacy-note">
+                  Vídeo em inglês; a orientação escrita em português permite
+                  acompanhar a atividade sem áudio.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- <section class="content-section" id="fontes">
+          <p class="eyebrow">Para aprofundar</p>
+          <h2>Fontes e créditos</h2>
+          <ul class="ev3-source-list">
+            <li>
+              <a
+                href="https://www.mtu.edu/academics/robotics/what/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Michigan Technological University — What is Robotics?</a
+              ><span
+                >Panorama introdutório das dimensões mecânica, elétrica/controle
+                e programação.</span
+              >
+            </li>
+            <li>
+              <a
+                href="https://education.lego.com/en-us/products/lego-mindstorms-education-ev3-core-set/5003400/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LEGO Education — MINDSTORMS Education EV3 Core Set</a
+              ><span
+                >Descrição oficial do conjunto consultado; a página informa que
+                o produto está aposentado.</span
+              >
+            </li>
+            <li>
+              <a
+                href="https://education.lego.com/en-us/product-resources/mindstorms-ev3/downloads/building-instructions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LEGO Education — Building Instructions</a
+              ><span
+                >Biblioteca oficial de instruções ilustradas da base e dos
+                módulos de sensores.</span
+              >
+            </li>
+            <li>
+              <a
+                href="https://ev3-help-online.api.education.lego.com/Education/en-gb/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LEGO EV3 Help Online</a
+              ><span
+                >Documentação de funcionamento dos sensores; parte do material
+                de ajuda está em inglês.</span
+              >
+            </li>
+            <li>
+              <a
+                href="https://robotsquare.com/2013/11/25/difference-between-ev3-home-edition-and-education-ev3/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RobotSquare — Education EV3 e Home Edition</a
+              ><span
+                >Comparação técnica secundária entre as edições do kit.</span
+              >
+            </li>
+            <li>
+              <a
+                href="https://education.lego.com/en-us/lessons/ev3-tutorials/curved-move/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LEGO Education — Curved Move</a
+              ><span
+                >Fonte da imagem da base motriz e da instrução oficial
+                vinculada.</span
+              >
+            </li>
+          </ul>
+        </section>-->
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="footer-brand" href="index.html">
+            Operadores Lógicos
+            <span>
+              Rob&oacute;tica, l&oacute;gica e aprendizagem significativa.
+            </span>
+          </a>
+          <p>
+            Um guia para preparar, aplicar e refletir sobre a pr&aacute;tica
+            docente.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="tutoriais.html"> Montagem e tutoriais </a>
+          <a href="apendices.html"> Materiais para download </a>
+          <a href="autores.html"> Autoria e orienta&ccedil;&atilde;o </a>
+        </div>
+        <div class="footer-version">
+          <span class="version-dot"> </span>
+          Vers&atilde;o naveg&aacute;vel &middot; 2026
+          <p>
+            Em revis&atilde;o pelo autor.
+            <br />
+            Sem coleta de respostas no site.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Jardel da Silva &middot; Produto educacional &middot;
+          PPGCITED / IFSul&ndash;CAVG
+        </p>
+        <p>
+          Guia independente. LEGO&reg; e MINDSTORMS&reg; s&atilde;o marcas de
+          seus titulares.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+CIRCUITO DE DECISÕES — PACOTE SIMPLIFICADO PARA HOSPEDAGEM
+
+ESTRUTURA
+- index.html: apresentação / página inicial.
+- encontros.html: visão geral da sequência.
+- encontro-1.html a encontro-6.html: roteiros dos encontros.
+- teoria.html, tabela-verdade.html, tutoriais.html, referencias.html,
+  autores.html e apendices.html: demais páginas.
+- site.css e site.js: estilos e interações compartilhados.
+- assets/: marca, fotografia provisória e fontes locais.
+- materiais/: instrumentos e fichas para download (PDF e Word).
+- 404.html: página para endereços inexistentes.
+- robots.txt e .nojekyll: controles simples de hospedagem e indexação.
+
+EDITAR NO VS CODE
+1. Extraia o ZIP e abra a pasta inteira no VS Code.
+2. Abra o HTML que deseja alterar. Os textos estão diretamente nas páginas; não
+   é necessário gerar ou compilar o site. Salve o arquivo e envie a pasta.
+3. Para mudar cores e espaçamentos, edite site.css. Evite alterar site.js, pois
+   ele controla o menu, os vídeos e o exercício lógico.
+4. Para trocar a fotografia, substitua assets/ev3-referencia.jpg por uma imagem
+   autoral ou com licença adequada, mantendo esse mesmo nome. A fotografia
+   atual é apenas uma referência visual LEGO Education e NÃO tem autorização
+   de redistribuição confirmada. Substitua-a antes de publicar publicamente.
+5. O item Tabela-verdade e as páginas individuais dos encontros estão ligados
+   no menu. Se renomear arquivos HTML, atualize também os links do menu em cada
+   página, além de outros links que apontem para o arquivo renomeado.
+
+TESTAR
+Para abrir as páginas, JavaScript e vídeos com comportamento igual ao publicado,
+use uma extensão de servidor local no VS Code (por exemplo, Live Server) ou envie
+para uma área de teste da hospedagem. A navegação HTML simples funciona também
+sem conexão; os vídeos externos precisam de internet.
+
+PUBLICAR EM DOMÍNIO PRÓPRIO
+Envie TODO o conteúdo desta pasta (incluindo site.css, site.js, assets, materiais,
+robots.txt, .nojekyll e 404.html) para a pasta-raiz pública do domínio, normalmente
+chamada public_html, www ou htdocs pelo provedor. O index.html deve ficar nessa
+pasta-raiz, não dentro de uma segunda pasta Circuito-de-Decisoes. Não envie só o
+index.html. Se o provedor permitir, configure 404.html como a página de erro.
+
+O domínio não foi informado; por isso o pacote não inventa endereço canonical
+nem sitemap. Revise o conteúdo, os links de vídeo e a fotografia antes de liberar
+o domínio ao público. A página do primeiro vídeo apresentou uma restrição de
+acesso durante a consulta; a página preserva o link externo e a orientação em
+texto como alternativas.
+
+O site não envia respostas de estudantes a um servidor. Os formulários são
+arquivos de apoio para o professor; não há coleta centralizada.

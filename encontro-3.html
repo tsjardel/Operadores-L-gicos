@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#ffd43b" name="theme-color" />
+    <title>
+      Encontro 3: Um sensor e repeti&ccedil;&atilde;o &mdash; Circuito de
+      Decis&otilde;es
+    </title>
+    <meta
+      content="Transforme uma condi&ccedil;&atilde;o de toque em sele&ccedil;&atilde;o, repeti&ccedil;&atilde;o e um comportamento observ&aacute;vel do rob&ocirc;."
+      name="description"
+    />
+    <meta
+      content="UEPS,rob&oacute;tica educacional,EV3,tabelas-verdade,operadores l&oacute;gicos"
+      name="keywords"
+    />
+    <meta content="Jardel da Silva" name="author" />
+    <meta content="index,follow" name="robots" />
+    <meta content="website" property="og:type" />
+    <meta content="Circuito de Decis&otilde;es" property="og:site_name" />
+    <meta
+      content="Encontro 3: Um sensor e repeti&ccedil;&atilde;o &mdash; Circuito de Decis&otilde;es"
+      property="og:title"
+    />
+    <meta
+      content="Transforme uma condi&ccedil;&atilde;o de toque em sele&ccedil;&atilde;o, repeti&ccedil;&atilde;o e um comportamento observ&aacute;vel do rob&ocirc;."
+      property="og:description"
+    />
+    <meta content="summary" name="twitter:card" />
+    <meta
+      content="Encontro 3: Um sensor e repeti&ccedil;&atilde;o &mdash; Circuito de Decis&otilde;es"
+      name="twitter:title"
+    />
+    <meta
+      content="Transforme uma condi&ccedil;&atilde;o de toque em sele&ccedil;&atilde;o, repeti&ccedil;&atilde;o e um comportamento observ&aacute;vel do rob&ocirc;."
+      name="twitter:description"
+    />
+    <link href="assets/marca.svg" rel="icon" type="image/svg+xml" />
+    <script defer="" src="site.js"></script>
+    <link href="site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo"> Pular para o conte&uacute;do </a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          aria-label="Circuito de Decis&otilde;es &mdash; apresenta&ccedil;&atilde;o"
+          class="brand"
+          href="index.html"
+        >
+          <img alt="" height="40" src="assets/marca.svg" width="40" />
+          <span>
+            Operadores
+            <span> Lógicos </span>
+          </span>
+        </a>
+        <button
+          aria-controls="menu-principal"
+          aria-expanded="false"
+          class="menu-toggle"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.7"
+            viewbox="0 0 24 24"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+          <span> Menu </span>
+        </button>
+        <nav
+          aria-label="Navega&ccedil;&atilde;o principal"
+          class="main-nav"
+          id="menu-principal"
+        >
+          <a href="index.html"> Apresenta&ccedil;&atilde;o </a>
+          <a href="teoria.html"> Teoria </a>
+          <a href="tabela-verdade.html"> Tabela-Verdade </a>
+          <a href="robotica-ev3.html"> Robótica e EV3 </a>
+          <div class="encounter-menu">
+            <div class="encounter-trigger">
+              <a aria-current="page" href="encontros.html"> Encontros </a>
+              <button
+                aria-controls="lista-encontros"
+                aria-expanded="false"
+                aria-label="Abrir submenu dos seis encontros"
+                class="dropdown-toggle"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="dropdown" id="lista-encontros">
+              <li>
+                <a href="encontro-1.html">
+                  <span class="mono"> 01 </span>
+                  Diagn&oacute;stico, kit e tabela
+                </a>
+              </li>
+              <li>
+                <a href="encontro-2.html">
+                  <span class="mono"> 02 </span>
+                  L&oacute;gica e rob&ocirc;-base
+                </a>
+              </li>
+              <li>
+                <a aria-current="page" href="encontro-3.html">
+                  <span class="mono"> 03 </span>
+                  Um sensor e repeti&ccedil;&atilde;o
+                </a>
+              </li>
+              <li>
+                <a href="encontro-4.html">
+                  <span class="mono"> 04 </span>
+                  Dois sensores e condi&ccedil;&otilde;es
+                </a>
+              </li>
+              <li>
+                <a href="encontro-5.html">
+                  <span class="mono"> 05 </span>
+                  Operadores com foco em AND
+                </a>
+              </li>
+              <li>
+                <a href="encontro-6.html">
+                  <span class="mono"> 06 </span>
+                  Projeto, socializa&ccedil;&atilde;o e question&aacute;rio
+                </a>
+              </li>
+              <li class="dropdown-all">
+                <a href="encontros.html">
+                  Ver a sequ&ecirc;ncia completa
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                    viewbox="0 0 24 24"
+                  >
+                    <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="referencias.html"> Refer&ecirc;ncias </a>
+          <a href="autores.html"> Autores </a>
+          <a href="apendices.html"> Ap&ecirc;ndices </a>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <div class="container page-top">
+        <nav aria-label="Voc&ecirc; est&aacute; aqui" class="breadcrumbs">
+          <a href="index.html"> Apresenta&ccedil;&atilde;o </a>
+          <span> / </span>
+          <a href="encontros.html"> Encontros </a>
+          <span> / </span>
+          <span aria-current="page"> Encontro 03 </span>
+        </nav>
+        <nav aria-label="Seis encontros" class="lesson-strip">
+          <a
+            aria-label="Encontro 1: Diagn&oacute;stico, kit e tabela"
+            href="encontro-1.html"
+          >
+            01
+          </a>
+          <a
+            aria-label="Encontro 2: L&oacute;gica e rob&ocirc;-base"
+            href="encontro-2.html"
+          >
+            02
+          </a>
+          <a
+            aria-current="page"
+            aria-label="Encontro 3: Um sensor e repeti&ccedil;&atilde;o"
+            href="encontro-3.html"
+          >
+            03
+          </a>
+          <a
+            aria-label="Encontro 4: Dois sensores e condi&ccedil;&otilde;es"
+            href="encontro-4.html"
+          >
+            04
+          </a>
+          <a
+            aria-label="Encontro 5: Operadores com foco em AND"
+            href="encontro-5.html"
+          >
+            05
+          </a>
+          <a
+            aria-label="Encontro 6: Projeto, socializa&ccedil;&atilde;o e question&aacute;rio"
+            href="encontro-6.html"
+          >
+            06
+          </a>
+        </nav>
+        <div class="lesson-heading">
+          <div>
+            <p class="eyebrow">Encontro 03 de 06</p>
+            <h1>Um sensor, sele&ccedil;&atilde;o e repeti&ccedil;&atilde;o</h1>
+            <p class="page-lead">
+              Transforme uma condi&ccedil;&atilde;o de toque em
+              sele&ccedil;&atilde;o, repeti&ccedil;&atilde;o e um comportamento
+              observ&aacute;vel do rob&ocirc;.
+            </p>
+            <div class="metadata">
+              <span>
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+                90 minutos
+              </span>
+              <span>
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <rect height="12" rx="2" width="12" x="6" y="6"></rect>
+                  <path
+                    d="M10 10h4v4h-4zM9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"
+                  ></path>
+                </svg>
+                Rob&oacute;tica EV3
+              </span>
+              <span class="origin">
+                Sequ&ecirc;ncia da disserta&ccedil;&atilde;o
+              </span>
+            </div>
+          </div>
+          <div aria-hidden="true" class="lesson-heading-mark mono">
+            03
+            <span>
+              ENTRADAS
+              <br />
+              DECIS&Otilde;ES
+              <br />
+              APRENDIZAGEM
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="container lesson-layout">
+        <aside class="teacher-support">
+          <h2>Apoio ao professor</h2>
+          <section>
+            <h3>
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="m5 12 4 4L19 6"></path>
+              </svg>
+              Objetivo
+            </h3>
+            <p>
+              Relacionar situa&ccedil;&otilde;es pr&aacute;ticas aos operadores
+              l&oacute;gicos por meio do planejamento e da
+              programa&ccedil;&atilde;o do rob&ocirc;.
+            </p>
+          </section>
+          <section>
+            <h3>
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="m14 6 4 4m-9 4-5 5m9-16a6 6 0 0 0-6 8L3 18a2 2 0 0 0 3 3l7-7a6 6 0 0 0 8-6l-4 3-4-4 3-4z"
+                ></path>
+              </svg>
+              Materiais
+            </h3>
+            <ul class="reading-list">
+              <li>sensor de toque</li>
+              <li>kit EV3</li>
+              <li>ambiente de programa&ccedil;&atilde;o em blocos</li>
+              <li>ficha A01</li>
+              <li>di&aacute;rio A02</li>
+            </ul>
+          </section>
+          <section>
+            <h3>
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+              </svg>
+              Arquivos da aula
+            </h3>
+            <a
+              class="file-row"
+              download=""
+              href="materiais/a01-previsao-teste.pdf"
+            >
+              <span>
+                Previs&atilde;o&ndash;observa&ccedil;&atilde;o&ndash;explica&ccedil;&atilde;o
+                <small class="tag complement"> Complemento </small>
+              </span>
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+              </svg>
+            </a>
+            <a
+              class="file-row"
+              download=""
+              href="materiais/a02-diario-docente.pdf"
+            >
+              <span>
+                Di&aacute;rio docente
+                <small class="tag complement"> Complemento </small>
+              </span>
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+              </svg>
+            </a>
+            <a class="text-link" href="apendices.html">
+              Ver vers&otilde;es edit&aacute;veis
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </section>
+          <p class="source-note">
+            <strong> Fonte da sequ&ecirc;ncia </strong>
+            <br />
+            Se&ccedil;&atilde;o 9.3, Quadro 4, pp. 88&ndash;89; relato nas pp.
+            89&ndash;91.
+            <br />
+            Disserta&ccedil;&atilde;o corrigida, 2026.
+          </p>
+        </aside>
+        <div class="lesson-reading">
+          <nav aria-label="Nesta ficha" class="section-tabs">
+            <a href="#antes"> Antes do encontro </a>
+            <a href="#durante"> Durante o encontro </a>
+            <a href="#depois"> Depois do encontro </a>
+          </nav>
+          <section class="lesson-section" id="antes">
+            <div class="section-label">
+              <span class="mono"> 01 </span>
+              <p class="eyebrow">Orienta&ccedil;&atilde;o para o professor</p>
+            </div>
+            <h2>Antes: preparar o significado</h2>
+            <ul class="reading-list">
+              <li>
+                Teste o sensor de toque e confirme o comportamento de parada
+                antes de apresentar o desafio.
+              </li>
+              <li>
+                Prepare a demonstra&ccedil;&atilde;o dos blocos equivalentes a
+                sele&ccedil;&atilde;o e repeti&ccedil;&atilde;o no ambiente
+                efetivamente utilizado.
+              </li>
+              <li>
+                Defina a condi&ccedil;&atilde;o de toque e o comportamento
+                esperado, deixando claro como ser&atilde;o anotadas as
+                corre&ccedil;&otilde;es do grupo.
+              </li>
+            </ul>
+            <details class="practical-note">
+              <summary>
+                Se o rob&ocirc; ou o v&iacute;deo n&atilde;o estiver
+                dispon&iacute;vel
+              </summary>
+              <p>
+                Descreva as condi&ccedil;&otilde;es com cart&otilde;es V/F,
+                pe&ccedil;a uma previs&atilde;o e simule a a&ccedil;&atilde;o do
+                programa. Registre esta mudan&ccedil;a como
+                adapta&ccedil;&atilde;o local. O trabalho desplugado n&atilde;o
+                reproduz a experi&ecirc;ncia f&iacute;sica, mas permite discutir
+                a rela&ccedil;&atilde;o entre entrada, express&atilde;o e
+                resultado.
+              </p>
+            </details>
+          </section>
+          <section class="lesson-section" id="durante">
+            <div class="section-label">
+              <span class="mono"> 02 </span>
+              <p class="eyebrow">
+                Sequ&ecirc;ncia da disserta&ccedil;&atilde;o
+              </p>
+            </div>
+            <h2>Durante: conduzir e observar</h2>
+            <p class="section-intro">
+              Os tempos preservam o quadro de planejamento. V&iacute;deos e
+              retomadas ocupam parte da etapa correspondente, n&atilde;o minutos
+              extras.
+            </p>
+            <ol class="timeline">
+              <li>
+                <div class="step-time mono">
+                  00&ndash;15
+                  <span> minutos </span>
+                </div>
+                <div class="step-content">
+                  <h3>
+                    Estruturas de sele&ccedil;&atilde;o e
+                    repeti&ccedil;&atilde;o
+                    <span class="duration"> 15 min </span>
+                  </h3>
+                  <p>
+                    Apresente sele&ccedil;&atilde;o e repeti&ccedil;&atilde;o
+                    com exemplos de SE/SEN&Atilde;O e de repeti&ccedil;&atilde;o
+                    condicionada, mantendo a distin&ccedil;&atilde;o entre
+                    operadores l&oacute;gicos e estruturas de controle.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="step-time mono">
+                  15&ndash;30
+                  <span> minutos </span>
+                </div>
+                <div class="step-content">
+                  <h3>
+                    Demonstra&ccedil;&atilde;o de c&oacute;digo
+                    <span class="duration"> 15 min </span>
+                  </h3>
+                  <p>
+                    Mostre como as condi&ccedil;&otilde;es l&oacute;gicas
+                    s&atilde;o avaliadas na programa&ccedil;&atilde;o em blocos
+                    e indique quais blocos correspondem &agrave; leitura,
+                    &agrave; decis&atilde;o e &agrave; repeti&ccedil;&atilde;o
+                    no ambiente testado.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="step-time mono">
+                  30&ndash;35
+                  <span> minutos </span>
+                </div>
+                <div class="step-content">
+                  <h3>
+                    Apresenta&ccedil;&atilde;o do desafio
+                    <span class="duration"> 5 min </span>
+                  </h3>
+                  <p>
+                    Explicite a condi&ccedil;&atilde;o de toque e o
+                    comportamento esperado, que consiste em parar a
+                    trajet&oacute;ria quando a condi&ccedil;&atilde;o for
+                    verdadeira.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="step-time mono">
+                  35&ndash;80
+                  <span> minutos </span>
+                </div>
+                <div class="step-content">
+                  <h3>
+                    Planejamento, montagem e programa&ccedil;&atilde;o
+                    <span class="duration"> 45 min </span>
+                  </h3>
+                  <p>
+                    Acompanhe o desenvolvimento em grupo desde o planejamento
+                    at&eacute; a montagem e a programa&ccedil;&atilde;o,
+                    observando a rela&ccedil;&atilde;o entre toque,
+                    condi&ccedil;&atilde;o e parada e registrando
+                    corre&ccedil;&otilde;es no c&oacute;digo ou no caminho
+                    escolhido.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="step-time mono">
+                  80&ndash;90
+                  <span> minutos </span>
+                </div>
+                <div class="step-content">
+                  <h3>
+                    Socializa&ccedil;&atilde;o
+                    <span class="duration"> 10 min </span>
+                  </h3>
+                  <p>
+                    Organize a apresenta&ccedil;&atilde;o dos planos e comente a
+                    l&oacute;gica empregada, retomando onde a
+                    condi&ccedil;&atilde;o &eacute; lida e como a
+                    repeti&ccedil;&atilde;o atualiza essa leitura.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="teaching-questions">
+              <p class="eyebrow">
+                Perguntas de media&ccedil;&atilde;o &middot; apoio novo do guia
+              </p>
+              <h3>O que vale perguntar?</h3>
+              <ul class="reading-list">
+                <li>
+                  Em que ponto do programa a condi&ccedil;&atilde;o &eacute;
+                  avaliada?
+                </li>
+                <li>
+                  O que precisa ser lido novamente para que a
+                  repeti&ccedil;&atilde;o tenha efeito?
+                </li>
+                <li>
+                  A dificuldade est&aacute; na porta, na leitura, no operador,
+                  no caminho ou na repeti&ccedil;&atilde;o?
+                </li>
+              </ul>
+            </div>
+            <div class="editorial-note">
+              <strong> Uma aten&ccedil;&atilde;o importante </strong>
+              <p>
+                Mantenha separados os operadores, a sele&ccedil;&atilde;o e a
+                repeti&ccedil;&atilde;o. Wait n&atilde;o desliga motores por si
+                s&oacute;, e Switch ou IF-ELSE n&atilde;o &eacute; operador
+                l&oacute;gico; indique os blocos equivalentes do ambiente usado
+                sem presumir que todos os editores tenham a mesma interface.
+              </p>
+            </div>
+          </section>
+          <section class="lesson-section videos-section" id="videos">
+            <p class="eyebrow">Consulta e prepara&ccedil;&atilde;o docente</p>
+            <h2>V&iacute;deos e tutoriais deste encontro</h2>
+            <p>
+              Os recursos abaixo foram acrescentados ao guia. N&atilde;o
+              s&atilde;o apresentados como v&iacute;deos utilizados na pesquisa.
+              Use a orienta&ccedil;&atilde;o em portugu&ecirc;s se n&atilde;o
+              puder assistir.
+            </p>
+            <div class="video-stack">
+              <article
+                class="video-card compact"
+                data-video-category="Sensores"
+              >
+                <div
+                  class="video-cover"
+                  data-video="aPIM-2IgDrQ"
+                  data-video-title="Blocos de programa&ccedil;&atilde;o: Tempo, Toque e Sensor Ultrass&ocirc;nico &mdash; ABA AMARELA"
+                >
+                  <button
+                    aria-label="Carregar v&iacute;deo: Tempo, toque e sensor ultrass&ocirc;nico"
+                    class="video-load"
+                    type="button"
+                  >
+                    <span class="video-symbol">
+                      <svg
+                        aria-hidden="true"
+                        class="icon"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.7"
+                        viewbox="0 0 24 24"
+                      >
+                        <path d="m9 5 11 7-11 7z"></path>
+                      </svg>
+                    </span>
+                    <span> Sensores </span>
+                    <strong> Tempo, toque e sensor ultrass&ocirc;nico </strong>
+                    <span class="video-duration mono"> &asymp; 8:08 </span>
+                  </button>
+                </div>
+                <div class="video-body">
+                  <p class="resource-meta">
+                    Inovemente &middot; Portugu&ecirc;s brasileiro
+                  </p>
+                  <h3>Tempo, toque e sensor ultrass&ocirc;nico</h3>
+                  <p>
+                    Relacione a leitura de toque e de dist&acirc;ncia &agrave;s
+                    condi&ccedil;&otilde;es avaliadas pelo programa no ambiente
+                    cl&aacute;ssico EV3.
+                  </p>
+                  <div class="video-links">
+                    <a
+                      class="text-link"
+                      href="https://www.youtube.com/watch?v=aPIM-2IgDrQ"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Abrir no YouTube
+                      <svg
+                        aria-hidden="true"
+                        class="icon"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.7"
+                        viewbox="0 0 24 24"
+                      >
+                        <path d="M14 3h7v7m0-7L10 14M10 4H4v16h16v-6"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <details class="text-guide">
+                    <summary>
+                      Orienta&ccedil;&atilde;o equivalente em texto
+                    </summary>
+                    <ol>
+                      <li>
+                        No editor, confira a porta de entrada e o tipo de sensor
+                        selecionado. Teste pressionar e soltar o sensor de
+                        toque.
+                      </li>
+                      <li>
+                        Leia a dist&acirc;ncia medida pelo ultrass&ocirc;nico.
+                        Defina uma compara&ccedil;&atilde;o, por exemplo
+                        dist&acirc;ncia menor que 10 cm, para obter uma
+                        condi&ccedil;&atilde;o verdadeira ou falsa.
+                      </li>
+                      <li>
+                        Associe a condi&ccedil;&atilde;o a uma sa&iacute;da
+                        simples. Se usar motores, programe tamb&eacute;m a
+                        parada: aguardar uma condi&ccedil;&atilde;o n&atilde;o
+                        desliga motores que j&aacute; estejam ligados.
+                      </li>
+                    </ol>
+                    <p class="small">
+                      A dist&acirc;ncia &eacute; uma leitura num&eacute;rica. A
+                      compara&ccedil;&atilde;o com o limiar produz V/F. O
+                      tutorial n&atilde;o combina duas entradas com AND/OR.
+                    </p>
+                  </details>
+                  <p class="privacy-note">
+                    O player externo s&oacute; &eacute; carregado quando
+                    voc&ecirc; escolhe assistir. Legendas nativas n&atilde;o
+                    confirmadas.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="video-card compact"
+                data-video-category="Programa&ccedil;&atilde;o"
+              >
+                <div
+                  class="video-cover"
+                  data-video="t9cyrxb676c"
+                  data-video-title="Blocos de programa&ccedil;&atilde;o: Comuta&ccedil;&atilde;o e Interruptor do Ciclo &mdash; ABA LARANJA"
+                >
+                  <button
+                    aria-label="Carregar v&iacute;deo: Sele&ccedil;&atilde;o e repeti&ccedil;&atilde;o no EV3"
+                    class="video-load"
+                    type="button"
+                  >
+                    <span class="video-symbol">
+                      <svg
+                        aria-hidden="true"
+                        class="icon"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.7"
+                        viewbox="0 0 24 24"
+                      >
+                        <path d="m9 5 11 7-11 7z"></path>
+                      </svg>
+                    </span>
+                    <span> Programa&ccedil;&atilde;o </span>
+                    <strong>
+                      Sele&ccedil;&atilde;o e repeti&ccedil;&atilde;o no EV3
+                    </strong>
+                    <span class="video-duration mono"> 8:12 </span>
+                  </button>
+                </div>
+                <div class="video-body">
+                  <p class="resource-meta">
+                    Inovemente &middot; Portugu&ecirc;s brasileiro
+                  </p>
+                  <h3>
+                    Sele&ccedil;&atilde;o e repeti&ccedil;&atilde;o no EV3
+                  </h3>
+                  <p>
+                    Observe a escolha de caminhos e a interrup&ccedil;&atilde;o
+                    de ciclos. Diferencie estruturas de fluxo de operadores
+                    l&oacute;gicos.
+                  </p>
+                  <div class="video-links">
+                    <a
+                      class="text-link"
+                      href="https://www.youtube.com/watch?v=t9cyrxb676c"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Abrir no YouTube
+                      <svg
+                        aria-hidden="true"
+                        class="icon"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.7"
+                        viewbox="0 0 24 24"
+                      >
+                        <path d="M14 3h7v7m0-7L10 14M10 4H4v16h16v-6"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <details class="text-guide">
+                    <summary>
+                      Orienta&ccedil;&atilde;o equivalente em texto
+                    </summary>
+                    <ol>
+                      <li>
+                        Defina a condi&ccedil;&atilde;o que ser&aacute; lida e
+                        compare o resultado esperado para V e F antes de
+                        programar.
+                      </li>
+                      <li>
+                        Use sele&ccedil;&atilde;o para escolher um caminho. Se
+                        for necess&aacute;rio ler novamente o sensor, organize a
+                        repeti&ccedil;&atilde;o e sua condi&ccedil;&atilde;o de
+                        t&eacute;rmino.
+                      </li>
+                      <li>
+                        Teste cada caminho e a sa&iacute;da do ciclo. AND/OR/NOT
+                        calculam valores l&oacute;gicos; sele&ccedil;&atilde;o e
+                        repeti&ccedil;&atilde;o organizam a
+                        execu&ccedil;&atilde;o.
+                      </li>
+                    </ol>
+                    <p class="small">
+                      Switch/SE-SEN&Atilde;O n&atilde;o &eacute; AND. O ambiente
+                      visual do tutorial &eacute; diferente do EV3 Classroom;
+                      confira os blocos no editor dispon&iacute;vel.
+                    </p>
+                  </details>
+                  <p class="privacy-note">
+                    O player externo s&oacute; &eacute; carregado quando
+                    voc&ecirc; escolhe assistir. Legendas nativas n&atilde;o
+                    confirmadas.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <a class="text-link" href="tutoriais.html">
+              Consultar a biblioteca completa
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </section>
+          <section class="lesson-section" id="depois">
+            <div class="section-label">
+              <span class="mono"> 03 </span>
+              <p class="eyebrow">Orienta&ccedil;&atilde;o para o professor</p>
+            </div>
+            <h2>Depois: tornar a aprendizagem explic&aacute;vel</h2>
+            <ul class="reading-list">
+              <li>
+                Observe a rela&ccedil;&atilde;o entre toque,
+                condi&ccedil;&atilde;o e parada, al&eacute;m da
+                explica&ccedil;&atilde;o da sele&ccedil;&atilde;o, da
+                repeti&ccedil;&atilde;o e das corre&ccedil;&otilde;es
+                realizadas.
+              </li>
+              <li>
+                Encaminhe as retomadas a partir das dificuldades registradas;
+                acolha outro sensor como amplia&ccedil;&atilde;o, mas mantenha o
+                desafio m&iacute;nimo centrado em um sensor de toque.
+              </li>
+            </ul>
+            <div class="ueps-connection">
+              <p class="eyebrow">Como se relaciona &agrave; UEPS</p>
+              <p>
+                Na UEPS, o encontro aprofunda conceitos em uma
+                situa&ccedil;&atilde;o mais espec&iacute;fica e articula
+                planejamento, programa&ccedil;&atilde;o e comportamento. A
+                avalia&ccedil;&atilde;o processual e as retomadas mediadas
+                tornam vis&iacute;veis as rela&ccedil;&otilde;es entre
+                condi&ccedil;&atilde;o, estrutura de controle e
+                a&ccedil;&atilde;o, sem tratar a implementa&ccedil;&atilde;o em
+                blocos como prova autom&aacute;tica de aprendizagem
+                significativa.
+              </p>
+              <a class="text-link" href="teoria.html">
+                Retomar os fundamentos
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                </svg>
+              </a>
+            </div>
+            <details class="practical-note">
+              <summary>
+                Complemento opcional para reaplica&ccedil;&atilde;o
+              </summary>
+              <p>
+                Como extens&atilde;o opcional, use A01 para registrar
+                previs&atilde;o, observa&ccedil;&atilde;o e
+                explica&ccedil;&atilde;o de uma nova execu&ccedil;&atilde;o do
+                mesmo desafio, sem exigir outro sensor nem apresentar o registro
+                como procedimento aplicado na pesquisa.
+              </p>
+              <p>
+                N&atilde;o acrescentar instrumentos ou tarefas sem planejar seu
+                tempo. Este complemento n&atilde;o &eacute; um procedimento
+                retrospectivamente atribu&iacute;do &agrave; pesquisa.
+              </p>
+            </details>
+          </section>
+          <section class="lesson-section">
+            <h2>Arquivos para preparar a aula</h2>
+            <div class="material-list compact-materials">
+              <article class="material-row">
+                <div>
+                  <span class="tag complement"> Complemento </span>
+                  <h3>
+                    Previs&atilde;o&ndash;observa&ccedil;&atilde;o&ndash;explica&ccedil;&atilde;o
+                  </h3>
+                  <p>
+                    Modelo complementar para registrar condi&ccedil;&otilde;es,
+                    previs&otilde;es, observa&ccedil;&otilde;es e
+                    explica&ccedil;&otilde;es em testes de l&oacute;gica.
+                  </p>
+                </div>
+                <div class="download-links">
+                  <a
+                    class="button small-button"
+                    download=""
+                    href="materiais/a01-previsao-teste.pdf"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewbox="0 0 24 24"
+                    >
+                      <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                    </svg>
+                    PDF
+                  </a>
+                  <a
+                    class="button small-button outline"
+                    download=""
+                    href="materiais/a01-previsao-teste.docx"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewbox="0 0 24 24"
+                    >
+                      <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                    </svg>
+                    Word edit&aacute;vel
+                  </a>
+                </div>
+              </article>
+              <article class="material-row">
+                <div>
+                  <span class="tag complement"> Complemento </span>
+                  <h3>Di&aacute;rio docente</h3>
+                  <p>
+                    Modelo complementar para acompanhamento docente de
+                    encontros, evid&ecirc;ncias e pr&oacute;ximos passos.
+                  </p>
+                </div>
+                <div class="download-links">
+                  <a
+                    class="button small-button"
+                    download=""
+                    href="materiais/a02-diario-docente.pdf"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewbox="0 0 24 24"
+                    >
+                      <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                    </svg>
+                    PDF
+                  </a>
+                  <a
+                    class="button small-button outline"
+                    download=""
+                    href="materiais/a02-diario-docente.docx"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                      viewbox="0 0 24 24"
+                    >
+                      <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                    </svg>
+                    Word edit&aacute;vel
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="container lesson-pagination">
+        <div>
+          <a href="encontro-2.html"> &larr; Encontro 02 </a>
+        </div>
+        <a class="pagination-center" href="encontros.html"> 03 / 06 </a>
+        <div>
+          <a href="encontro-4.html"> Encontro 04 &rarr; </a>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="footer-brand" href="index.html">
+            Circuito de Decis&otilde;es
+            <span>
+              Rob&oacute;tica, l&oacute;gica e aprendizagem significativa.
+            </span>
+          </a>
+          <p>
+            Um guia para preparar, aplicar e refletir sobre a pr&aacute;tica
+            docente.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="tutoriais.html"> Montagem e tutoriais </a>
+          <a href="apendices.html"> Materiais para download </a>
+          <a href="autores.html"> Autoria e orienta&ccedil;&atilde;o </a>
+        </div>
+        <div class="footer-version">
+          <span class="version-dot"> </span>
+          Vers&atilde;o naveg&aacute;vel &middot; 2026
+          <p>
+            Em revis&atilde;o pelo autor.
+            <br />
+            Sem coleta de respostas no site.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Jardel da Silva &middot; Produto educacional &middot;
+          PPGCITED / IFSul&ndash;CAVG
+        </p>
+        <p>
+          Guia independente. LEGO&reg; e MINDSTORMS&reg; s&atilde;o marcas de
+          seus titulares.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

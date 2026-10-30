@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#ffd43b" name="theme-color" />
+    <title>
+      Seis encontros de l&oacute;gica e rob&oacute;tica &mdash; Circuito de
+      Decis&otilde;es
+    </title>
+    <meta
+      content="Conhe&ccedil;a a sequ&ecirc;ncia did&aacute;tica de seis encontros: diagn&oacute;stico, montagem, sensores, operadores e projeto final. Acesse os roteiros e materiais de cada aula."
+      name="description"
+    />
+    <meta
+      content="UEPS,rob&oacute;tica educacional,EV3,tabelas-verdade,operadores l&oacute;gicos"
+      name="keywords"
+    />
+    <meta content="Jardel da Silva" name="author" />
+    <meta content="index,follow" name="robots" />
+    <meta content="website" property="og:type" />
+    <meta content="Circuito de Decis&otilde;es" property="og:site_name" />
+    <meta
+      content="Seis encontros de l&oacute;gica e rob&oacute;tica &mdash; Circuito de Decis&otilde;es"
+      property="og:title"
+    />
+    <meta
+      content="Conhe&ccedil;a a sequ&ecirc;ncia did&aacute;tica de seis encontros: diagn&oacute;stico, montagem, sensores, operadores e projeto final. Acesse os roteiros e materiais de cada aula."
+      property="og:description"
+    />
+    <meta content="summary" name="twitter:card" />
+    <meta
+      content="Seis encontros de l&oacute;gica e rob&oacute;tica &mdash; Circuito de Decis&otilde;es"
+      name="twitter:title"
+    />
+    <meta
+      content="Conhe&ccedil;a a sequ&ecirc;ncia did&aacute;tica de seis encontros: diagn&oacute;stico, montagem, sensores, operadores e projeto final. Acesse os roteiros e materiais de cada aula."
+      name="twitter:description"
+    />
+    <link href="assets/marca.svg" rel="icon" type="image/svg+xml" />
+    <script defer="" src="site.js"></script>
+    <link href="site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo"> Pular para o conte&uacute;do </a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          aria-label="Circuito de Decis&otilde;es &mdash; apresenta&ccedil;&atilde;o"
+          class="brand"
+          href="index.html"
+        >
+          <img alt="" height="40" src="assets/marca.svg" width="40" />
+          <span>
+            Operadores
+            <span> Lógicos </span>
+          </span>
+        </a>
+        <button
+          aria-controls="menu-principal"
+          aria-expanded="false"
+          class="menu-toggle"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.7"
+            viewbox="0 0 24 24"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+          <span> Menu </span>
+        </button>
+        <nav
+          aria-label="Navega&ccedil;&atilde;o principal"
+          class="main-nav"
+          id="menu-principal"
+        >
+          <a href="index.html"> Apresenta&ccedil;&atilde;o </a>
+          <a href="teoria.html"> Teoria </a>
+          <a href="tabela-verdade.html"> Tabela-Verdade </a>
+          <a href="robotica-ev3.html"> Robótica e EV3 </a>
+          <div class="encounter-menu">
+            <div class="encounter-trigger">
+              <a aria-current="page" href="encontros.html"> Encontros </a>
+              <button
+                aria-controls="lista-encontros"
+                aria-expanded="false"
+                aria-label="Abrir submenu dos seis encontros"
+                class="dropdown-toggle"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="dropdown" id="lista-encontros">
+              <li>
+                <a href="encontro-1.html">
+                  <span class="mono"> 01 </span>
+                  Diagn&oacute;stico, kit e tabela
+                </a>
+              </li>
+              <li>
+                <a href="encontro-2.html">
+                  <span class="mono"> 02 </span>
+                  L&oacute;gica e rob&ocirc;-base
+                </a>
+              </li>
+              <li>
+                <a href="encontro-3.html">
+                  <span class="mono"> 03 </span>
+                  Um sensor e repeti&ccedil;&atilde;o
+                </a>
+              </li>
+              <li>
+                <a href="encontro-4.html">
+                  <span class="mono"> 04 </span>
+                  Dois sensores e condi&ccedil;&otilde;es
+                </a>
+              </li>
+              <li>
+                <a href="encontro-5.html">
+                  <span class="mono"> 05 </span>
+                  Operadores com foco em AND
+                </a>
+              </li>
+              <li>
+                <a href="encontro-6.html">
+                  <span class="mono"> 06 </span>
+                  Projeto, socializa&ccedil;&atilde;o e question&aacute;rio
+                </a>
+              </li>
+              <li class="dropdown-all">
+                <a href="encontros.html">
+                  Ver a sequ&ecirc;ncia completa
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                    viewbox="0 0 24 24"
+                  >
+                    <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="referencias.html"> Refer&ecirc;ncias </a>
+          <a href="autores.html"> Autores </a>
+          <a href="apendices.html"> Ap&ecirc;ndices </a>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <div class="container page-top">
+        <nav aria-label="Voc&ecirc; est&aacute; aqui" class="breadcrumbs">
+          <a href="index.html"> Apresenta&ccedil;&atilde;o </a>
+          <span> / </span>
+          <span aria-current="page"> Seis encontros. Um percurso. </span>
+        </nav>
+        <div class="page-heading">
+          <p class="eyebrow">A sequ&ecirc;ncia did&aacute;tica</p>
+          <h1>Seis encontros. Um percurso.</h1>
+          <p class="page-lead">
+            Do diagn&oacute;stico ao projeto final: 540 minutos para relacionar
+            proposi&ccedil;&otilde;es, tabelas-verdade, sensores e
+            programa&ccedil;&atilde;o.
+          </p>
+        </div>
+      </div>
+      <div class="container page-content">
+        <div class="notice">
+          <strong> Como usar as fichas </strong>
+          <p>
+            Comece pela prepara&ccedil;&atilde;o e acompanhe antes, durante e
+            depois de cada encontro. Objetivos e tempos v&ecirc;m do
+            cap&iacute;tulo 9 corrigido. V&iacute;deos, perguntas de
+            media&ccedil;&atilde;o e modelos complementares s&atilde;o apoios
+            posteriores, identificados nas p&aacute;ginas.
+          </p>
+        </div>
+        <div class="overview-list">
+          <article class="overview-item">
+            <span class="mono"> 01 </span>
+            <div>
+              <p class="eyebrow">90 minutos &middot; 6 etapas</p>
+              <h2>
+                <a href="encontro-1.html">
+                  Conhecimentos pr&eacute;vios, kit e primeira tabela
+                </a>
+              </h2>
+              <p>
+                Apresentar a disciplina de Matem&aacute;tica Computacional e o
+                kit EV3, levantar os conhecimentos pr&eacute;vios e iniciar a
+                rela&ccedil;&atilde;o entre sensores e tabelas-verdade.
+              </p>
+              <p class="source-note">
+                Se&ccedil;&atilde;o 9.1, Quadro 2, pp. 77&ndash;78; relato nas
+                pp. 79&ndash;83.
+              </p>
+            </div>
+            <a class="button outline small-button" href="encontro-1.html">
+              Abrir ficha
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </article>
+          <article class="overview-item">
+            <span class="mono"> 02 </span>
+            <div>
+              <p class="eyebrow">90 minutos &middot; 6 etapas</p>
+              <h2>
+                <a href="encontro-2.html">
+                  Proposi&ccedil;&otilde;es, operadores e montagem do
+                  rob&ocirc;-base
+                </a>
+              </h2>
+              <p>
+                Revisar proposi&ccedil;&otilde;es, operadores l&oacute;gicos e
+                tabelas-verdade e relacion&aacute;-los &agrave; atividade
+                pr&aacute;tica com o kit.
+              </p>
+              <p class="source-note">
+                Se&ccedil;&atilde;o 9.2, Quadro 3, p. 84; relato nas pp.
+                85&ndash;87.
+              </p>
+            </div>
+            <a class="button outline small-button" href="encontro-2.html">
+              Abrir ficha
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </article>
+          <article class="overview-item">
+            <span class="mono"> 03 </span>
+            <div>
+              <p class="eyebrow">90 minutos &middot; 5 etapas</p>
+              <h2>
+                <a href="encontro-3.html">
+                  Um sensor, sele&ccedil;&atilde;o e repeti&ccedil;&atilde;o
+                </a>
+              </h2>
+              <p>
+                Relacionar situa&ccedil;&otilde;es pr&aacute;ticas aos
+                operadores l&oacute;gicos por meio do planejamento e da
+                programa&ccedil;&atilde;o do rob&ocirc;.
+              </p>
+              <p class="source-note">
+                Se&ccedil;&atilde;o 9.3, Quadro 4, pp. 88&ndash;89; relato nas
+                pp. 89&ndash;91.
+              </p>
+            </div>
+            <a class="button outline small-button" href="encontro-3.html">
+              Abrir ficha
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </article>
+          <article class="overview-item">
+            <span class="mono"> 04 </span>
+            <div>
+              <p class="eyebrow">90 minutos &middot; 4 etapas</p>
+              <h2>
+                <a href="encontro-4.html">
+                  Dois sensores e condi&ccedil;&otilde;es verdadeiro/falso
+                </a>
+              </h2>
+              <p>
+                Explorar sensores, associar suas leituras a
+                condi&ccedil;&otilde;es verdadeiras ou falsas e trabalhar com
+                dois sensores na programa&ccedil;&atilde;o.
+              </p>
+              <p class="source-note">
+                Se&ccedil;&atilde;o 9.4, Quadro 5, pp. 92&ndash;93; relato nas
+                pp. 93&ndash;95.
+              </p>
+            </div>
+            <a class="button outline small-button" href="encontro-4.html">
+              Abrir ficha
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </article>
+          <article class="overview-item">
+            <span class="mono"> 05 </span>
+            <div>
+              <p class="eyebrow">90 minutos &middot; 3 etapas</p>
+              <h2>
+                <a href="encontro-5.html">
+                  Operadores na programa&ccedil;&atilde;o, com foco em AND
+                </a>
+              </h2>
+              <p>
+                Aplicar AND, OR e NOT no software EV3. A atividade principal do
+                quadro concentra-se em AND.
+              </p>
+              <p class="source-note">
+                Se&ccedil;&atilde;o 9.5, Quadro 6, p. 96; relato nas pp.
+                97&ndash;99.
+              </p>
+            </div>
+            <a class="button outline small-button" href="encontro-5.html">
+              Abrir ficha
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </article>
+          <article class="overview-item">
+            <span class="mono"> 06 </span>
+            <div>
+              <p class="eyebrow">90 minutos &middot; 3 etapas</p>
+              <h2>
+                <a href="encontro-6.html">
+                  Projeto livre, socializa&ccedil;&atilde;o e
+                  question&aacute;rio final
+                </a>
+              </h2>
+              <p>
+                Integrar os operadores em projetos pr&oacute;prios, socializar
+                os resultados e coletar a avalia&ccedil;&atilde;o dos estudantes
+                sobre a sequ&ecirc;ncia.
+              </p>
+              <p class="source-note">
+                Se&ccedil;&atilde;o 9.6, Quadro 7, p. 100; relato nas pp.
+                101&ndash;104.
+              </p>
+            </div>
+            <a class="button outline small-button" href="encontro-6.html">
+              Abrir ficha
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </article>
+        </div>
+        <section class="content-section">
+          <h2>O que permanece e o que pode mudar</h2>
+          <div class="two-column">
+            <div>
+              <h3>Preservar o objetivo l&oacute;gico</h3>
+              <p>
+                Definir condi&ccedil;&otilde;es, prever sa&iacute;das,
+                programar, testar e explicar. O funcionamento do rob&ocirc; deve
+                ser acompanhado pela justificativa dos estudantes.
+              </p>
+            </div>
+            <div>
+              <h3>Registrar as adapta&ccedil;&otilde;es</h3>
+              <p>
+                Quantidade de kits, modelo da base, editor,
+                organiza&ccedil;&atilde;o dos grupos e tempo podem exigir
+                ajustes locais. Registre essas escolhas sem apresent&aacute;-las
+                como procedimentos da aplica&ccedil;&atilde;o original.
+              </p>
+            </div>
+          </div>
+          <a class="button" href="apendices.html">
+            Separar os instrumentos
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.7"
+              viewbox="0 0 24 24"
+            >
+              <path d="M5 12h14m-5-5 5 5-5 5"></path>
+            </svg>
+          </a>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="footer-brand" href="index.html">
+            Circuito de Decis&otilde;es
+            <span>
+              Rob&oacute;tica, l&oacute;gica e aprendizagem significativa.
+            </span>
+          </a>
+          <p>
+            Um guia para preparar, aplicar e refletir sobre a pr&aacute;tica
+            docente.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="tutoriais.html"> Montagem e tutoriais </a>
+          <a href="apendices.html"> Materiais para download </a>
+          <a href="autores.html"> Autoria e orienta&ccedil;&atilde;o </a>
+        </div>
+        <div class="footer-version">
+          <span class="version-dot"> </span>
+          Vers&atilde;o naveg&aacute;vel &middot; 2026
+          <p>
+            Em revis&atilde;o pelo autor.
+            <br />
+            Sem coleta de respostas no site.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Jardel da Silva &middot; Produto educacional &middot;
+          PPGCITED / IFSul&ndash;CAVG
+        </p>
+        <p>
+          Guia independente. LEGO&reg; e MINDSTORMS&reg; s&atilde;o marcas de
+          seus titulares.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

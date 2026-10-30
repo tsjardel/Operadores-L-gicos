@@ -1,0 +1,38 @@
+PACOTE: página Robótica e kit EV3
+
+O site original não foi alterado. Este pacote contém uma página para você inserir manualmente na raiz do seu site atual.
+
+Arquivos para copiar para a raiz do site:
+- robotica-ev3.html
+- robotica-ev3.css
+
+Pasta de ativos nova:
+- assets/robotica-ev3/ (copie esta pasta para a pasta assets já existente no site)
+
+A página reutiliza os arquivos compartilhados que já existem no site Circuito de Decisões:
+- site.css
+- site.js
+- assets/marca.svg
+
+Não substitua site.css, site.js ou a marca do site. A página adiciona uma folha CSS própria e usa o carregador de vídeos e o menu móvel que o site já possui. Se sua versão local usa nomes ou caminhos diferentes, ajuste somente os caminhos dos links no <head> de robotica-ev3.html.
+
+Para que o link apareça em todo o site, copie o link em FRAGMENTO-menu-principal.html e acrescente-o ao <nav class="main-nav"> de cada página, de preferência logo depois do link Tabela-verdade. O novo HTML já mostra o item Robótica e EV3 como página atual. Não substituí nenhuma das suas páginas locais.
+
+Para testar antes de publicar, abra a pasta do seu site no VS Code e use a extensão Live Server ou um servidor local. Coloque robotica-ev3.html na mesma pasta que index.html, site.css e site.js. Os PDFs, páginas oficiais e vídeos exigem conexão com a internet.
+
+Textos e títulos estão diretamente no HTML e podem ser alterados pelo VS Code. As cores, cartões, imagens, colunas e ajustes para telas menores estão em robotica-ev3.css.
+
+Conteúdo incluído:
+- explicação introdutória de robótica e do fluxo sensor → programa → atuador;
+- componentes do kit EV3 Education, portas de entrada e saída e diferenças entre edições;
+- sequência introdutória para montar e testar uma base motriz;
+- explicações e exemplos para os sensores de toque, ultrassônico, cor e giroscópio;
+- links para instruções oficiais de montagem em PDF, páginas de ajuda dos sensores e vídeos;
+- orientação escrita junto aos vídeos, inclusive para os casos de conteúdo silencioso, vídeo em inglês ou interface de software antiga.
+
+Créditos e licenças das imagens:
+- ev3-driving-base-curved-move.png: imagem de apoio da lição oficial LEGO Education “Curved Move”;
+- ev3-brick-color-sensor-help.png: imagem da documentação LEGO EV3 Help Online;
+- ev3-education-core-set-capitulo6.jpg: recorte da Figura 5 do capítulo 6 da dissertação fornecida, cuja fonte original está indicada como LEGO Education (2013).
+
+As imagens de produto foram incluídas como apoio para revisão do material; a licença para redistribuição no seu domínio não foi confirmada. Antes da publicação pública, substitua-as por imagens autorais/licenciadas ou confirme os direitos de uso. A página identifica a natureza independente do produto e não se apresenta como página oficial da LEGO.

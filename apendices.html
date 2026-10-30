@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#ffd43b" name="theme-color" />
+    <title>
+      Ap&ecirc;ndices e materiais &mdash; Circuito de Decis&otilde;es
+    </title>
+    <meta
+      content="Baixe diagn&oacute;stico, exerc&iacute;cios e question&aacute;rio final em PDF e Word. Consulte os modelos complementares de previs&atilde;o, di&aacute;rio docente e desafio final."
+      name="description"
+    />
+    <meta
+      content="UEPS,rob&oacute;tica educacional,EV3,tabelas-verdade,operadores l&oacute;gicos"
+      name="keywords"
+    />
+    <meta content="Jardel da Silva" name="author" />
+    <meta content="index,follow" name="robots" />
+    <meta content="website" property="og:type" />
+    <meta content="Circuito de Decis&otilde;es" property="og:site_name" />
+    <meta
+      content="Ap&ecirc;ndices e materiais &mdash; Circuito de Decis&otilde;es"
+      property="og:title"
+    />
+    <meta
+      content="Baixe diagn&oacute;stico, exerc&iacute;cios e question&aacute;rio final em PDF e Word. Consulte os modelos complementares de previs&atilde;o, di&aacute;rio docente e desafio final."
+      property="og:description"
+    />
+    <meta content="summary" name="twitter:card" />
+    <meta
+      content="Ap&ecirc;ndices e materiais &mdash; Circuito de Decis&otilde;es"
+      name="twitter:title"
+    />
+    <meta
+      content="Baixe diagn&oacute;stico, exerc&iacute;cios e question&aacute;rio final em PDF e Word. Consulte os modelos complementares de previs&atilde;o, di&aacute;rio docente e desafio final."
+      name="twitter:description"
+    />
+    <link href="assets/marca.svg" rel="icon" type="image/svg+xml" />
+    <script defer="" src="site.js"></script>
+    <link href="site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo"> Pular para o conte&uacute;do </a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          aria-label="Circuito de Decis&otilde;es &mdash; apresenta&ccedil;&atilde;o"
+          class="brand"
+          href="index.html"
+        >
+          <img alt="" height="40" src="assets/marca.svg" width="40" />
+          <span>
+            Operadores
+            <span> Lógicos </span>
+          </span>
+        </a>
+        <button
+          aria-controls="menu-principal"
+          aria-expanded="false"
+          class="menu-toggle"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.7"
+            viewbox="0 0 24 24"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+          <span> Menu </span>
+        </button>
+        <nav
+          aria-label="Navega&ccedil;&atilde;o principal"
+          class="main-nav"
+          id="menu-principal"
+        >
+          <a href="index.html"> Apresenta&ccedil;&atilde;o </a>
+          <a href="teoria.html"> Teoria </a>
+          <a href="tabela-verdade.html"> Tabela-Verdade </a>
+          <a href="robotica-ev3.html"> Robótica e EV3 </a>
+          <div class="encounter-menu">
+            <div class="encounter-trigger">
+              <a href="encontros.html"> Encontros </a>
+              <button
+                aria-controls="lista-encontros"
+                aria-expanded="false"
+                aria-label="Abrir submenu dos seis encontros"
+                class="dropdown-toggle"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="dropdown" id="lista-encontros">
+              <li>
+                <a href="encontro-1.html">
+                  <span class="mono"> 01 </span>
+                  Diagn&oacute;stico, kit e tabela
+                </a>
+              </li>
+              <li>
+                <a href="encontro-2.html">
+                  <span class="mono"> 02 </span>
+                  L&oacute;gica e rob&ocirc;-base
+                </a>
+              </li>
+              <li>
+                <a href="encontro-3.html">
+                  <span class="mono"> 03 </span>
+                  Um sensor e repeti&ccedil;&atilde;o
+                </a>
+              </li>
+              <li>
+                <a href="encontro-4.html">
+                  <span class="mono"> 04 </span>
+                  Dois sensores e condi&ccedil;&otilde;es
+                </a>
+              </li>
+              <li>
+                <a href="encontro-5.html">
+                  <span class="mono"> 05 </span>
+                  Operadores com foco em AND
+                </a>
+              </li>
+              <li>
+                <a href="encontro-6.html">
+                  <span class="mono"> 06 </span>
+                  Projeto, socializa&ccedil;&atilde;o e question&aacute;rio
+                </a>
+              </li>
+              <li class="dropdown-all">
+                <a href="encontros.html">
+                  Ver a sequ&ecirc;ncia completa
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                    viewbox="0 0 24 24"
+                  >
+                    <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="referencias.html"> Refer&ecirc;ncias </a>
+          <a href="autores.html"> Autores </a>
+          <a aria-current="page" href="apendices.html"> Ap&ecirc;ndices </a>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <div class="container page-top">
+        <nav aria-label="Voc&ecirc; est&aacute; aqui" class="breadcrumbs">
+          <a href="index.html"> Apresenta&ccedil;&atilde;o </a>
+          <span> / </span>
+          <span aria-current="page"> Ap&ecirc;ndices e materiais </span>
+        </nav>
+        <div class="page-heading">
+          <p class="eyebrow">Baixar &middot; editar &middot; imprimir</p>
+          <h1>Ap&ecirc;ndices e materiais</h1>
+          <p class="page-lead">
+            Instrumentos da disserta&ccedil;&atilde;o e modelos complementares
+            ficam em cole&ccedil;&otilde;es identificadas. N&atilde;o h&aacute;
+            envio ou armazenamento de respostas neste site.
+          </p>
+        </div>
+      </div>
+      <div class="container page-content">
+        <div class="notice">
+          <strong>
+            Use na sua turma, com suas pr&oacute;prias decis&otilde;es
+          </strong>
+          <p>
+            Baixe os arquivos e revise finalidade, linguagem e tempo. Se criar
+            uma vers&atilde;o em formul&aacute;rio digital, fa&ccedil;a a
+            c&oacute;pia na conta do professor, confira permiss&otilde;es e
+            teste com uma resposta fict&iacute;cia. N&atilde;o use uma coleta
+            centralizada na conta do autor do produto.
+          </p>
+        </div>
+        <div
+          aria-label="Filtrar materiais"
+          class="filter-bar"
+          data-filter-group="materiais"
+        >
+          <button aria-pressed="true" data-filter="all" type="button">
+            Todos
+          </button>
+          <button aria-pressed="false" data-filter="Original" type="button">
+            Originais da disserta&ccedil;&atilde;o
+          </button>
+          <button aria-pressed="false" data-filter="Complemento" type="button">
+            Complementos do guia
+          </button>
+        </div>
+        <p class="filter-status" data-filter-status="materiais" role="status">
+          6 recursos dispon&iacute;veis.
+        </p>
+        <div class="material-list" id="materiais">
+          <article class="material-row" data-material-kind="Original">
+            <div>
+              <span class="tag original"> Original </span>
+              <h2>Diagn&oacute;stico &mdash; conhecimentos pr&eacute;vios</h2>
+              <p>
+                Question&aacute;rio diagn&oacute;stico integral do
+                Ap&ecirc;ndice B, com espa&ccedil;o para respostas discursivas.
+              </p>
+              <p class="source-note">
+                Fonte: Disserta&ccedil;&atilde;o final corrigida, Ap&ecirc;ndice
+                B, p. 123.
+              </p>
+            </div>
+            <div class="download-links">
+              <a
+                class="button small-button"
+                download=""
+                href="materiais/d01-diagnostico.pdf"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                </svg>
+                PDF
+              </a>
+              <a
+                class="button small-button outline"
+                download=""
+                href="materiais/d01-diagnostico.docx"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                </svg>
+                Word edit&aacute;vel
+              </a>
+            </div>
+          </article>
+          <article class="material-row" data-material-kind="Original">
+            <div>
+              <span class="tag original"> Original </span>
+              <h2>Exerc&iacute;cios &mdash; Tabelas-Verdade (AND, OR, NOT)</h2>
+              <p>
+                Exerc&iacute;cios integrais do Ap&ecirc;ndice C, com tabelas
+                vazias e espa&ccedil;o para registros.
+              </p>
+              <p class="source-note">
+                Fonte: Disserta&ccedil;&atilde;o final corrigida, Ap&ecirc;ndice
+                C, p. 124&ndash;125.
+              </p>
+            </div>
+            <div class="download-links">
+              <a
+                class="button small-button"
+                download=""
+                href="materiais/d02-exercicios.pdf"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                </svg>
+                PDF
+              </a>
+              <a
+                class="button small-button outline"
+                download=""
+                href="materiais/d02-exercicios.docx"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                </svg>
+                Word edit&aacute;vel
+              </a>
+            </div>
+          </article>
+          <article class="material-row" data-material-kind="Original">
+            <div>
+              <span class="tag original"> Original </span>
+              <h2>Question&aacute;rio final</h2>
+              <p>
+                Question&aacute;rio final integral do Ap&ecirc;ndice D, com
+                espa&ccedil;o para respostas e sem preenchimento.
+              </p>
+              <p class="source-note">
+                Fonte: Disserta&ccedil;&atilde;o final corrigida, Ap&ecirc;ndice
+                D, p. 126.
+              </p>
+            </div>
+            <div class="download-links">
+              <a
+                class="button small-button"
+                download=""
+                href="materiais/d03-questionario-final.pdf"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                </svg>
+                PDF
+              </a>
+              <a
+                class="button small-button outline"
+                download=""
+                href="materiais/d03-questionario-final.docx"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                </svg>
+                Word edit&aacute;vel
+              </a>
+            </div>
+          </article>
+          <article class="material-row" data-material-kind="Complemento">
+            <div>
+              <span class="tag complement"> Complemento </span>
+              <h2>
+                Previs&atilde;o&ndash;observa&ccedil;&atilde;o&ndash;explica&ccedil;&atilde;o
+              </h2>
+              <p>
+                Modelo complementar para registrar condi&ccedil;&otilde;es,
+                previs&otilde;es, observa&ccedil;&otilde;es e
+                explica&ccedil;&otilde;es em testes de l&oacute;gica.
+              </p>
+              <p class="source-note">
+                Modelo complementar do guia &bull; n&atilde;o aplicado como tal
+                na pesquisa
+              </p>
+            </div>
+            <div class="download-links">
+              <a
+                class="button small-button"
+                download=""
+                href="materiais/a01-previsao-teste.pdf"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                </svg>
+                PDF
+              </a>
+              <a
+                class="button small-button outline"
+                download=""
+                href="materiais/a01-previsao-teste.docx"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                </svg>
+                Word edit&aacute;vel
+              </a>
+            </div>
+          </article>
+          <article class="material-row" data-material-kind="Complemento">
+            <div>
+              <span class="tag complement"> Complemento </span>
+              <h2>Di&aacute;rio docente</h2>
+              <p>
+                Modelo complementar para acompanhamento docente de encontros,
+                evid&ecirc;ncias e pr&oacute;ximos passos.
+              </p>
+              <p class="source-note">
+                Modelo complementar do guia &bull; n&atilde;o aplicado como tal
+                na pesquisa
+              </p>
+            </div>
+            <div class="download-links">
+              <a
+                class="button small-button"
+                download=""
+                href="materiais/a02-diario-docente.pdf"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                </svg>
+                PDF
+              </a>
+              <a
+                class="button small-button outline"
+                download=""
+                href="materiais/a02-diario-docente.docx"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                </svg>
+                Word edit&aacute;vel
+              </a>
+            </div>
+          </article>
+          <article class="material-row" data-material-kind="Complemento">
+            <div>
+              <span class="tag complement"> Complemento </span>
+              <h2>
+                Desafio final &mdash; miss&atilde;o com sensores e operadores
+                l&oacute;gicos
+              </h2>
+              <p>
+                Modelo complementar de miss&atilde;o autoral com dois sensores,
+                dois operadores e testes documentados.
+              </p>
+              <p class="source-note">
+                Modelo complementar do guia &bull; n&atilde;o aplicado como tal
+                na pesquisa
+              </p>
+            </div>
+            <div class="download-links">
+              <a
+                class="button small-button"
+                download=""
+                href="materiais/a03-desafio-final.pdf"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"></path>
+                </svg>
+                PDF
+              </a>
+              <a
+                class="button small-button outline"
+                download=""
+                href="materiais/a03-desafio-final.docx"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path>
+                </svg>
+                Word edit&aacute;vel
+              </a>
+            </div>
+          </article>
+        </div>
+        <section class="content-section">
+          <h2>Originais preservados. Complementos identificados.</h2>
+          <div class="two-column">
+            <div>
+              <h3>Da disserta&ccedil;&atilde;o</h3>
+              <p>
+                D01 tem 17 perguntas diagn&oacute;sticas; D02 re&uacute;ne cinco
+                tarefas com tabelas; D03 tem sete perguntas finais. Os arquivos
+                n&atilde;o incluem respostas nem dados dos participantes.
+              </p>
+              <p>
+                O item 5 de D02 mant&eacute;m a express&atilde;o
+                hist&oacute;rica &ldquo;luz ambiente = V&rdquo;. Antes de
+                us&aacute;-lo, defina qual sensor, modo, unidade e limiar tornam
+                essa condi&ccedil;&atilde;o verdadeira. A nota editorial
+                est&aacute; separada do enunciado original.
+              </p>
+            </div>
+            <div>
+              <h3>Novos modelos do guia</h3>
+              <p>
+                A01 organiza previs&atilde;o, teste e explica&ccedil;&atilde;o;
+                A02 apoia o di&aacute;rio docente; A03 estrutura o desafio
+                final. S&atilde;o complementos posteriores e n&atilde;o
+                instrumentos apresentados como aplicados na pesquisa.
+              </p>
+              <p>
+                O TCLE da pesquisa original n&atilde;o integra o pacote
+                padr&atilde;o como autoriza&ccedil;&atilde;o
+                reutiliz&aacute;vel. Uma nova pesquisa ou
+                divulga&ccedil;&atilde;o de imagens e dados exige an&aacute;lise
+                pr&oacute;pria das autoriza&ccedil;&otilde;es aplic&aacute;veis.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="footer-brand" href="index.html">
+            Circuito de Decis&otilde;es
+            <span>
+              Rob&oacute;tica, l&oacute;gica e aprendizagem significativa.
+            </span>
+          </a>
+          <p>
+            Um guia para preparar, aplicar e refletir sobre a pr&aacute;tica
+            docente.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="tutoriais.html"> Montagem e tutoriais </a>
+          <a href="apendices.html"> Materiais para download </a>
+          <a href="autores.html"> Autoria e orienta&ccedil;&atilde;o </a>
+        </div>
+        <div class="footer-version">
+          <span class="version-dot"> </span>
+          Vers&atilde;o naveg&aacute;vel &middot; 2026
+          <p>
+            Em revis&atilde;o pelo autor.
+            <br />
+            Sem coleta de respostas no site.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Jardel da Silva &middot; Produto educacional &middot;
+          PPGCITED / IFSul&ndash;CAVG
+        </p>
+        <p>
+          Guia independente. LEGO&reg; e MINDSTORMS&reg; s&atilde;o marcas de
+          seus titulares.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
